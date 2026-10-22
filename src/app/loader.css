@@ -1,0 +1,96 @@
+/* No layout/body locks. CSS also fails open if hydration never arrives. */
+.brand-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: grid;
+  place-items: center;
+  background: #fff;
+  color: var(--ink, #1a1d1f);
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 350ms cubic-bezier(.22, 1, .36, 1);
+  animation: brand-loader-failsafe 0s 2400ms forwards;
+}
+
+.brand-loader--leaving { opacity: 0; }
+
+.brand-loader__content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+  transform: translateY(-10px);
+  transition: transform 350ms cubic-bezier(.22, 1, .36, 1);
+}
+
+.brand-loader--leaving .brand-loader__content { transform: translateY(-18px); }
+
+.brand-loader__frame {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 294px;
+  height: 134px;
+  overflow: hidden;
+}
+
+.brand-loader__logo { width: 212px; height: auto; }
+
+.brand-loader__corner {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-color: var(--primary, #50b649);
+  border-style: solid;
+  border-width: 0;
+  opacity: .65;
+}
+
+.brand-loader__corner--tl { top: 0; left: 0; border-top-width: 2px; border-left-width: 2px; border-top-left-radius: 5px; }
+.brand-loader__corner--tr { top: 0; right: 0; border-top-width: 2px; border-right-width: 2px; border-top-right-radius: 5px; }
+.brand-loader__corner--bl { bottom: 0; left: 0; border-bottom-width: 2px; border-left-width: 2px; border-bottom-left-radius: 5px; }
+.brand-loader__corner--br { bottom: 0; right: 0; border-bottom-width: 2px; border-right-width: 2px; border-bottom-right-radius: 5px; }
+
+.brand-loader__scan {
+  position: absolute;
+  top: 14px;
+  bottom: 14px;
+  left: 0;
+  width: 48px;
+  background: linear-gradient(90deg, transparent, #50b64918);
+  border-right: 2px solid var(--primary, #50b649);
+  transform: translateX(-50px);
+  animation: brand-loader-scan 1450ms cubic-bezier(.45, 0, .25, 1) infinite;
+}
+
+.brand-loader__label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #626e74;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.brand-loader__dot { width: 5px; height: 5px; border-radius: 50%; background: var(--primary, #50b649); }
+
+@keyframes brand-loader-scan {
+  0% { transform: translateX(-50px); opacity: 0; }
+  12% { opacity: 1; }
+  82% { opacity: 1; }
+  100% { transform: translateX(296px); opacity: 0; }
+}
+
+@keyframes brand-loader-failsafe { to { visibility: hidden; } }
+
+@media (max-width: 359px) {
+  .brand-loader__frame { width: 256px; }
+  .brand-loader__logo { width: 190px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-loader { display: none; animation: none; transition: none; }
+  .brand-loader__scan { animation: none; display: none; }
+  .brand-loader__content { transition: none; }
+}

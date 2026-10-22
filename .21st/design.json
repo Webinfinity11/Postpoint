@@ -1,0 +1,173 @@
+{
+  "version": 1,
+  "project": {
+    "name": "rsline",
+    "productType": "Retail equipment catalog",
+    "stack": [
+      "nextjs",
+      "react",
+      "tailwind-v4"
+    ]
+  },
+  "sources": {
+    "tokens": [
+      "src/app/globals.css"
+    ],
+    "components": [
+      "src/components/ui"
+    ],
+    "assets": [
+      "public/images"
+    ],
+    "instructions": []
+  },
+  "design": {
+    "colorMode": "light",
+    "colors": {
+      "--primary": {
+        "value": "#50b649",
+        "source": "src/app/globals.css"
+      },
+      "--primary-hover": {
+        "value": "#3f9a39",
+        "source": "src/app/globals.css"
+      },
+      "--primary-dark": {
+        "value": "#2e7a2a",
+        "source": "src/app/globals.css"
+      },
+      "--primary-darker": {
+        "value": "#1f5a1b",
+        "source": "src/app/globals.css"
+      },
+      "--primary-light": {
+        "value": "#b9e6b5",
+        "source": "src/app/globals.css"
+      },
+      "--primary-soft": {
+        "value": "#d6efd3",
+        "source": "src/app/globals.css"
+      },
+      "--primary-tint": {
+        "value": "#eef8ed",
+        "source": "src/app/globals.css"
+      },
+      "--muted": {
+        "value": "var(--gray-dark)",
+        "source": "src/app/globals.css"
+      },
+      "--color-primary": {
+        "value": "var(--primary)",
+        "source": "src/app/globals.css"
+      },
+      "--color-primary-hover": {
+        "value": "var(--primary-hover)",
+        "source": "src/app/globals.css"
+      },
+      "--color-primary-dark": {
+        "value": "var(--primary-dark)",
+        "source": "src/app/globals.css"
+      },
+      "--color-primary-light": {
+        "value": "var(--primary-light)",
+        "source": "src/app/globals.css"
+      },
+      "--color-primary-tint": {
+        "value": "var(--primary-tint)",
+        "source": "src/app/globals.css"
+      },
+      "--color-gray-brand": {
+        "value": "var(--gray)",
+        "source": "src/app/globals.css"
+      },
+      "--color-muted": {
+        "value": "var(--muted)",
+        "source": "src/app/globals.css"
+      },
+      "--color-line": {
+        "value": "var(--line)",
+        "source": "src/app/globals.css"
+      },
+      "--color-surface": {
+        "value": "var(--surface)",
+        "source": "src/app/globals.css"
+      },
+      "--color-ink": {
+        "value": "var(--ink)",
+        "source": "src/app/globals.css"
+      }
+    },
+    "typography": {
+      "--font": {
+        "value": "var(--font-inter), var(--font-georgian), Arial, Helvetica, sans-serif",
+        "source": "src/app/globals.css"
+      },
+      "--font-sans": {
+        "value": "var(--font)",
+        "source": "src/app/globals.css"
+      }
+    },
+    "spacing": {},
+    "radius": {
+      "--radius": {
+        "value": "22px",
+        "source": "src/app/globals.css"
+      }
+    },
+    "shadows": {},
+    "motion": {},
+    "density": "comfortable"
+  },
+  "components": {
+    "installed": [
+      "Breadcrumbs",
+      "CategoryIcon",
+      "Lines",
+      "Logo",
+      "PillButton",
+      "SectionHeading",
+      "CategoryCard"
+    ],
+    "preferredPrimitives": [],
+    "patterns": []
+  },
+  "constraints": {
+    "must": [],
+    "avoid": []
+  },
+  "decisions": [
+    "Use one centered content area with a maximum width of 90% of the viewport and a 1600px cap. Align the header, hero, section content, inner pages, and footer content to the same edges; preserve full-width section backgrounds.",
+    "Homepage popular categories use a continuous infinite carousel with four cards on desktop, two on tablets, and a single card with the next card partly visible on phones. Reuse CategoryCard; support touch dragging, previous/next arrows, pause on hover or focus, keyboard navigation, and reduced motion.",
+    "Keep the homepage focused on the original two-slide hero carousel, the existing category carousel, eight featured products across the six business categories, an interactive product section with category tabs, and a compact company introduction. Remove repeated promotional banners.",
+    "Restore both original hero photographs, Georgian slide copy, catalog and company links. Crossfade every six seconds with previous/next arrows and dot controls; pause on hover, focus, reduced motion, hidden tabs, or when offscreen. Preserve the centered 90%/1600px content width.",
+    "The category product section shows every product in the selected category without reloading. Use green selected tabs with keyboard navigation and horizontal scrolling on phones and tablets; keep its selection independent of the header search.",
+    "Use the RS Line logo with a restrained green scanning animation for the first document load. Fade it away when ready, skip on interaction or reduced motion, and fail open if loading or hydration stalls. Do not show it during client route navigation."
+  ],
+  "evidence": [
+    {
+      "fact": "components.installed",
+      "source": "src/components/ui"
+    },
+    {
+      "fact": "design.tokens",
+      "source": "src/app/globals.css"
+    },
+    {
+      "fact": "project.stack:nextjs",
+      "source": "package.json"
+    },
+    {
+      "fact": "project.stack:react",
+      "source": "package.json"
+    },
+    {
+      "fact": "project.stack:tailwind-v4",
+      "source": "package.json"
+    },
+    {
+      "fact": "design.colorMode:light",
+      "source": "src/app/globals.css body and page surfaces"
+    }
+  ],
+  "generatedAt": "2026-10-22T14:31:40.919Z"
+}

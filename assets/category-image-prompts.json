@@ -1,0 +1,44 @@
+[
+  {
+    "id": "pos",
+    "prompt": "Use case: photorealistic-natural. Asset type: landscape ecommerce category photograph for a retail equipment supplier. Create a very realistic professional DSLR photograph of an actual checkout point: a matte black touchscreen POS terminal, compact thermal receipt printer and a closed metal cash drawer on a clean light gray counter, a barcode scanner beside them. A modern quiet supermarket softly out of focus in the background. Three-quarter eye-level viewpoint, 50mm lens, natural window light, convincing metal and textured black plastic, realistic subtle imperfections and soft contact shadows. All equipment fully visible, centered composition with generous breathing room suitable for cropping to 4:3. Crisp commercial photography, neutral white balance. Landscape 4:3 image. No text, no logos, no people, no illustration, no vector, no icons, no CGI appearance, no collage. Make this look like a real photograph.",
+    "mode": "built-in image_gen",
+    "output": "public/images/categories/pos.webp",
+    "generatedPath": "C:\\Users\\INFINITY SOLUTIONS\\.codex\\generated_images\\01a163fd-d237-7b62-86d4-386a1a75a4e9\\exec-fd649d91-6c98-4a7a-a85e-b744739dcae3.png"
+  },
+  {
+    "id": "warehouse-tech",
+    "prompt": "Use case: photorealistic-natural. Asset type: landscape 4:3 ecommerce category photo for a retail equipment supplier. A very realistic professional commercial DSLR photograph, natural soft daylight, neutral white balance, real materials and subtle everyday imperfections, 50mm lens, convincing contact shadows, sharp main subjects with a softly blurred background. All main equipment fully visible and grouped centrally, generous crop-safe margins. No people, no text, no logos, no icons, no illustrations, no CGI appearance, no collage. Photograph a rugged handheld inventory terminal with a small touchscreen and physical keypad standing in its charging dock on a clean warehouse packing workbench, alongside a compact barcode label printer and a roll of blank self-adhesive labels. Softly blurred warehouse shelving and cardboard boxes in background. The inventory terminal is the clear hero. Matte black textured plastic and brushed metal details.",
+    "mode": "built-in image_gen",
+    "output": "public/images/categories/warehouse-tech.webp",
+    "generatedPath": "C:\\Users\\INFINITY SOLUTIONS\\.codex\\generated_images\\01a163fd-d237-7b62-86d4-386a1a75a4e9\\exec-493c1f93-2599-463e-918e-a9df0d5b5cb1.png"
+  },
+  {
+    "id": "market-equipment",
+    "prompt": "Use case: photorealistic-natural. Asset type: landscape 4:3 ecommerce category photo for a retail equipment supplier. A very realistic professional commercial DSLR photograph, natural soft daylight, neutral white balance, real materials and subtle everyday imperfections, 50mm lens, convincing contact shadows, sharp main subjects with a softly blurred background. All main equipment fully visible and grouped centrally, generous crop-safe margins. No people, no text, no logos, no icons, no illustrations, no CGI appearance, no collage. Photograph a pristine modern supermarket equipment showroom: a double-sided gray metal gondola shelving unit in the foreground with five clearly visible shelves, a refrigerated glass display counter and a tall glass-door commercial refrigerator in the middle background. Empty shelving and clean neutral tiled floor. Architectural commercial interior photography, straight upright lines, a three-quarter angle, realistic metal, glass and rubber details. Not a food photograph.",
+    "mode": "built-in image_gen",
+    "output": "public/images/categories/market-equipment.webp",
+    "generatedPath": "C:\\Users\\INFINITY SOLUTIONS\\.codex\\generated_images\\01a163fd-d237-7b62-86d4-386a1a75a4e9\\exec-b3ac60f7-3d00-479b-b585-905f18538f54.png"
+  },
+  {
+    "id": "market-accessories",
+    "prompt": "Use case: photorealistic-natural. Asset type: landscape 4:3 ecommerce category photo for a retail equipment supplier. A very realistic professional commercial DSLR photograph, natural soft daylight, neutral white balance, real materials and subtle everyday imperfections, 50mm lens, convincing contact shadows, sharp main subjects with a softly blurred background. All main equipment fully visible and grouped centrally, generous crop-safe margins. No people, no text, no logos, no icons, no illustrations, no CGI appearance, no collage. Photograph two nested full-size steel wire shopping carts with dark green handles alongside two green plastic hand shopping baskets stacked on a low metal basket stand. A clean modern supermarket entrance softly out of focus. Full carts and baskets fit comfortably in frame. Detailed galvanized steel mesh, caster wheels and textured plastic, natural reflections, grounded shadows.",
+    "mode": "built-in image_gen",
+    "output": "public/images/categories/market-accessories.webp",
+    "generatedPath": "C:\\Users\\INFINITY SOLUTIONS\\.codex\\generated_images\\01a163fd-d237-7b62-86d4-386a1a75a4e9\\exec-f06b1409-5590-4efd-bbcb-80fd518be94f.png"
+  },
+  {
+    "id": "shelving",
+    "prompt": "Use case: photorealistic-natural. Asset type: landscape 4:3 ecommerce category photo for a retail equipment supplier. A very realistic professional commercial DSLR photograph, natural soft daylight, neutral white balance, real materials and subtle everyday imperfections, 50mm lens, convincing contact shadows, sharp main subjects with a softly blurred background. All main equipment fully visible and grouped centrally, generous crop-safe margins. No people, no text, no logos, no icons, no illustrations, no CGI appearance, no collage. Photograph a real warehouse storage bay with industrial blue upright and orange crossbeam pallet racking, several levels of neatly arranged plain cardboard cartons and one small gray galvanized shelving unit in the foreground. Concrete floor, orderly practical warehouse, straight verticals, perspective three-quarter view, real steel texture and believable construction details. The shelving structure is the main subject, not the boxes.",
+    "mode": "built-in image_gen",
+    "output": "public/images/categories/shelving.webp",
+    "generatedPath": "C:\\Users\\INFINITY SOLUTIONS\\.codex\\generated_images\\01a163fd-d237-7b62-86d4-386a1a75a4e9\\exec-7a727103-e6a4-44fd-a8e4-b016089108b5.png"
+  },
+  {
+    "id": "security",
+    "prompt": "Use case: photorealistic-natural. Asset type: landscape 4:3 ecommerce category photo for a retail equipment supplier. A very realistic professional commercial DSLR photograph, natural soft daylight, neutral white balance, real materials and subtle everyday imperfections, 50mm lens, convincing contact shadows, sharp main subjects with a softly blurred background. All main equipment fully visible and grouped centrally, generous crop-safe margins. No people, no text, no logos, no icons, no illustrations, no CGI appearance, no collage. Photograph real retail security equipment: a white dome surveillance camera, a white bullet CCTV camera and a small black network video recorder neatly arranged on a light gray store service counter. A pair of silver anti-theft EAS gate pedestals at the clean shop entrance softly out of focus in the background. Cameras are sharp and realistically manufactured with tiny screws and textured white plastic, dark glass lenses and subtle reflections.",
+    "mode": "built-in image_gen",
+    "output": "public/images/categories/security.webp",
+    "generatedPath": "C:\\Users\\INFINITY SOLUTIONS\\.codex\\generated_images\\01a163fd-d237-7b62-86d4-386a1a75a4e9\\exec-fd3c9689-740c-43b1-b710-0f6968110268.png"
+  }
+]

@@ -1,0 +1,180 @@
+{
+  "sourceUrl": "https://darkred-gaur-221374.hostingersite.com/products/",
+  "categories": [
+    {
+      "id": "pos",
+      "title": "სალაროს ტექნიკა",
+      "count": 5
+    },
+    {
+      "id": "warehouse-tech",
+      "title": "საწყობის ინვენტარიზაციის ტექნიკა",
+      "count": 3
+    },
+    {
+      "id": "market-equipment",
+      "title": "მარკეტის ინვენტარი",
+      "count": 8
+    },
+    {
+      "id": "market-accessories",
+      "title": "მარკეტის აქსესუარები",
+      "count": 3
+    },
+    {
+      "id": "shelving",
+      "title": "საწყობის სტელაჟები",
+      "count": 3
+    },
+    {
+      "id": "security",
+      "title": "უსაფრთხოების სისტემა",
+      "count": 6
+    }
+  ],
+  "products": [
+    {
+      "id": "pos-terminal",
+      "name": "POS ტერმინალი",
+      "image": "/images/products/pos.webp"
+    },
+    {
+      "id": "receipt-printer",
+      "name": "თერმული პრინტერი",
+      "image": "/images/products/thermal-printer.webp"
+    },
+    {
+      "id": "barcode-scanner",
+      "name": "შტრიხკოდის სკანერი",
+      "image": "/images/products/scanners.webp"
+    },
+    {
+      "id": "cash-drawer",
+      "name": "ფულის უჯრა",
+      "image": "/images/products/cash-drawer.webp"
+    },
+    {
+      "id": "label-scale",
+      "name": "ელექტრონული სასწორი",
+      "image": "/images/products/scale.webp"
+    },
+    {
+      "id": "data-terminal",
+      "name": "მობილური ტერმინალი",
+      "image": "/images/products/mobile-terminal.webp"
+    },
+    {
+      "id": "label-printer",
+      "name": "შტრიხკოდის პრინტერი",
+      "image": "/images/products/barcode-printer.webp"
+    },
+    {
+      "id": "consumables",
+      "name": "სახარჯი მასალები",
+      "image": "/images/products/consumables.webp"
+    },
+    {
+      "id": "store-shelf",
+      "name": "დარბაზის კედლის თაროები",
+      "image": "/images/products/wall-shelf.webp"
+    },
+    {
+      "id": "double-sided-shelf",
+      "name": "დარბაზის ორმხრივი თაროები",
+      "image": "/images/products/double-shelf.webp"
+    },
+    {
+      "id": "produce-shelf",
+      "name": "ხილბოსტნის თაროები",
+      "image": "/images/products/produce-shelf.webp"
+    },
+    {
+      "id": "bread-shelf",
+      "name": "პურის თაროები",
+      "image": "/images/products/bread-shelf.webp"
+    },
+    {
+      "id": "checkout-counter",
+      "name": "სალაროს მაგიდა",
+      "image": "/images/products/checkout.webp"
+    },
+    {
+      "id": "upright-fridge",
+      "name": "ვერტიკალური მაცივარი",
+      "image": "/images/products/upright-fridge.webp"
+    },
+    {
+      "id": "display-fridge",
+      "name": "დახლ-მაცივარი",
+      "image": "/images/products/display-fridge.webp"
+    },
+    {
+      "id": "entry-gate",
+      "name": "შესასვლელის მოწყობა",
+      "image": "/images/products/entry.webp"
+    },
+    {
+      "id": "shopping-cart",
+      "name": "საყიდლების ურიკები",
+      "image": "/images/products/carts.webp"
+    },
+    {
+      "id": "shopping-basket",
+      "name": "საყიდლების კალათები",
+      "image": "/images/products/baskets.webp"
+    },
+    {
+      "id": "wire-display-basket",
+      "name": "პროდუქციის კალათები",
+      "image": "/images/products/wire-bin.webp"
+    },
+    {
+      "id": "warehouse-rack",
+      "name": "საწყობის თაროები",
+      "image": "/images/products/warehouse-shelf.webp"
+    },
+    {
+      "id": "archive-shelf",
+      "name": "საარქივე თაროები",
+      "image": "/images/products/archive-shelf.webp"
+    },
+    {
+      "id": "metal-cabinet",
+      "name": "მეტალის კარადები",
+      "image": "/images/products/cabinets.webp"
+    },
+    {
+      "id": "cctv-kit",
+      "name": "სამეთვალყურეო კამერები და ჩამწერები",
+      "image": "/images/products/cctv.webp"
+    },
+    {
+      "id": "eas-gate",
+      "name": "SENSORMATIC",
+      "image": "/images/products/eas.webp"
+    },
+    {
+      "id": "people-counter",
+      "name": "მომხმარებლის მთვლელი",
+      "image": "/images/products/people-counter.webp"
+    },
+    {
+      "id": "attendance-terminal",
+      "name": "თანამშრომლების აღრიცხვის სისტემა",
+      "image": "/images/products/attendance.webp"
+    },
+    {
+      "id": "money-counter",
+      "name": "ფულის და ხურდის მთვლელი აპარატები",
+      "image": "/images/products/money-counter.webp"
+    },
+    {
+      "id": "uv-detector",
+      "name": "ყალბი კუპიურების დეტექტორი",
+      "image": "/images/products/uv-detector.webp"
+    }
+  ],
+  "demoPrices": true,
+  "categoryImages": "Generated with built-in image_gen",
+  "productImages": "Imported from the provided source page"
+}
