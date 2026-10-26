@@ -11,7 +11,7 @@ export default async function LoginPage() {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src="/brand/logo.svg" alt="Pospoint" width={176} height={32} />
         <h1>ადმინ პანელი</h1>
-        {isAuthConfigured() ? (
+        {(await isAuthConfigured()) ? (
           <LoginForm />
         ) : (
           <p className="adm-alert">

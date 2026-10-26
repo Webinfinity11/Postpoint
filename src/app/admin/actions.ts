@@ -5,7 +5,7 @@ import { revalidateTag } from "next/cache";
 import { redirect } from "next/navigation";
 import sharp from "sharp";
 import type { Category, CategoryIconName, Product, Unit } from "@/types";
-import { checkCredentials, endSession, isAuthConfigured, requireAdmin, startSession } from "@/lib/auth";
+import { changeCredentials, checkCredentials, currentAdmin, endSession, isAuthConfigured, requireAdmin, startSession } from "@/lib/auth";
 import { CATALOG_TAG } from "@/lib/data";
 import { SLUG_PATTERN } from "@/lib/slug";
 import {
@@ -18,8 +18,8 @@ export type FormState = { error?: string };
 // ---------- auth ----------
 
 export async function login(_prev: FormState, form: FormData): Promise<FormState> {
-  if (!isAuthConfigured()) return { error: "ADMIN_EMAIL და ADMIN_PASSWORD ცვლადები არ არის მითითებული." };
-  if (!checkCredentials(String(form.get("email") ?? ""), String(form.get("password") ?? ""))) {
+  if (!(await isAuthConfigured())) return { error: "ADMIN_EMAIL და ADMIN_PASSWORD ცვლადები არ არის მითითებული." };
+  if (!(await checkCredentials(String(form.get("email") ?? ""), String(form.get("password") ?? "")))) {
     await new Promise((r) => setTimeout(r, 800)); // პაროლის გადარჩევის შესანელებლად
     return { error: "ელფოსტა ან პაროლი არასწორია." };
   }
@@ -203,4 +203,29 @@ export async function deleteProduct(id: string): Promise<FormState> {
   }
   revalidateTag(CATALOG_TAG);
   return {};
+}
+
+// ---------- settings ----------
+
+export async function saveCredentials(_prev: FormState, form: FormData): Promise<FormState> {
+  await requireAdmin();
+  const email = text(form, "email").toLowerCase();
+  const current = String(form.get("currentPassword") ?? "");
+  const next = String(form.get("newPassword") ?? "");
+  const repeat = String(form.get("repeatPassword") ?? "");
+
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return { error: "ელფოსტა არასწორია." };
+  if (next && next.length < 8) return { error: "ახალი პაროლი მინიმუმ 8 სიმბოლო უნდა იყოს." };
+  if (next !== repeat) return { error: "ახალი პაროლები ერთმანეთს არ ემთხვევა." };
+  const admin = await currentAdmin();
+  if (!admin || !(await checkCredentials(admin.email, current))) {
+    await new Promise((r) => setTimeout(r, 800));
+    return { error: "მიმდინარე პაროლი არასწორია." };
+  }
+  try {
+    await changeCredentials(email, next);
+  } catch (error) {
+    return dbError(error);
+  }
+  redirect("/admin/settings?saved=1");
 }

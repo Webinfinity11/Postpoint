@@ -2,12 +2,13 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { LayoutDashboard, Package, Shapes } from "lucide-react";
+import { LayoutDashboard, Package, Settings, Shapes } from "lucide-react";
 
 const links = [
   { href: "/admin", label: "მიმოხილვა", icon: LayoutDashboard },
   { href: "/admin/products", label: "პროდუქტები", icon: Package },
   { href: "/admin/categories", label: "კატეგორიები", icon: Shapes },
+  { href: "/admin/settings", label: "პარამეტრები", icon: Settings },
 ];
 
 export function AdminNav() {

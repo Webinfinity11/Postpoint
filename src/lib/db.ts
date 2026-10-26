@@ -56,6 +56,12 @@ CREATE TABLE IF NOT EXISTS images (
   data       bytea NOT NULL,
   created_at timestamptz NOT NULL DEFAULT now()
 );
+CREATE TABLE IF NOT EXISTS admin_credentials (
+  id            integer PRIMARY KEY DEFAULT 1 CHECK (id = 1),
+  email         text NOT NULL,
+  password_hash text NOT NULL,
+  updated_at    timestamptz NOT NULL DEFAULT now()
+);
 `;
 
 async function setup() {
@@ -221,3 +227,18 @@ export async function deleteImageIfUnused(path: string) {
   );
 }
 
+
+// ---------- admin login (one row; see src/lib/auth.ts) ----------
+
+export async function getAdminCredentials() {
+  const [row] = await sql<{ email: string; password_hash: string }>("SELECT email, password_hash FROM admin_credentials WHERE id=1");
+  return row ? { email: row.email, passwordHash: row.password_hash } : null;
+}
+
+export async function setAdminCredentials(email: string, passwordHash: string) {
+  await sql(
+    `INSERT INTO admin_credentials (id, email, password_hash) VALUES (1, $1, $2)
+     ON CONFLICT (id) DO UPDATE SET email=$1, password_hash=$2, updated_at=now()`,
+    [email, passwordHash],
+  );
+}

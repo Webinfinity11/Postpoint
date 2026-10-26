@@ -21,7 +21,9 @@ For local work you can use the Railway database's public URL (Postgres → Conne
 - **კატეგორიები** — add / edit / delete, category image, fallback icon, background tint, order.
   A category with products can't be deleted.
 
-Login is an email and password (`ADMIN_EMAIL`, `ADMIN_PASSWORD`). Changes appear on the site immediately.
+Login is an email and password. They start from `ADMIN_EMAIL` / `ADMIN_PASSWORD` and can then be changed in
+**პარამეტრები** (stored in the `admin_credentials` table, password hashed with scrypt). Forgot the password?
+Delete the `admin_credentials` row (Railway → Postgres → Data) and the variables apply again. Changes appear on the site immediately.
 
 ## Data
 
