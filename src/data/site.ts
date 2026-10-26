@@ -4,12 +4,12 @@
 import type { Unit } from "@/types";
 
 export const site = {
-  name: "RS Line",
-  tagline: "ტექნოლოგია თქვენი ბიზნესისთვის.",
+  name: "pospoint",
+  tagline: "თქვენი ბიზნესის შემდეგი ნაბიჯი.",
   description: "სალაროს ტექნიკა, მარკეტის ინვენტარი, საწყობის აღჭურვილობა და უსაფრთხოების სისტემები. კონსულტაცია, ტექნიკური და პროგრამული მხარდაჭერა.",
-  logo: { src: "/logo.svg", width: 2822, height: 896 },
+  logo: { src: "/logo.svg", width: 352, height: 64 },
 
-  currency: { symbol: "$", position: "before" as "before" | "after" },
+  currency: { symbol: "₾", position: "after" as "before" | "after" },
 
   units: { pc: "ცალი", set: "კომპლექტი", roll: "რულონი", pack: "შეკვრა" } satisfies Record<Unit, string>,
 
@@ -53,18 +53,18 @@ export const site = {
     slideLabel: "სლაიდი",
     slides: [
       {
-        image: "/images/hero1.webp",
+        image: "/images/brand/hero1-pospoint.webp",
         imageAlt: "გადახდის ტერმინალი მაღაზიის დახლზე",
-        eyebrow: "RS LINE",
+        eyebrow: "POSPOINT",
         title: "სალარო სისტემები თქვენი ბიზნესისთვის",
         text: "სალარო ტექნიკის დიდი არჩევანი",
         button: "კატალოგი",
         action: "catalog" as "catalog" | "about",
       },
       {
-        image: "/images/hero2.webp",
+        image: "/images/brand/hero2-pospoint.webp",
         imageAlt: "მომხმარებელი ბარათით იხდის ტერმინალზე",
-        eyebrow: "RS LINE",
+        eyebrow: "POSPOINT",
         title: "ყველაფერი თანამედროვე მაღაზიისთვის",
         text: "ტექნიკა და ინვენტარი ვაჭრობისთვის",
         button: "ვრცლად",
@@ -121,28 +121,28 @@ export const site = {
     view: "{name} - დეტალურად",
     save: "{name} - რჩეულებში დამატება",
     unsave: "{name} - რჩეულებიდან წაშლა",
-    fallbackCategory: "RS LINE",
+    fallbackCategory: "POSPOINT",
     detailCaption: "სანიმუშო პროდუქტი - ფასი და აღწერა დროებითია.",
     demoCaption: "სატესტო ფასი. კონკრეტული მოდელი და კომპლექტაცია დააზუსტეთ კონსულტაციისას.",
   },
 
   produceBanner: {
-    title: ["ახალი ხილი და ბოსტნეული.", "მიწოდება ყოველდღე."],
-    text: "ყველაფერს, რაც გჭირდება, პირდაპირ კარამდე მოგიტანთ.",
-    button: "ხილი და ბოსტნეული",
+    title: ["ტექნიკა, რომელიც", "ბიზნესს ამარტივებს."],
+    text: "შეარჩიეთ სალაროს სისტემები და აღჭურვილობა თქვენი ყოველდღიური საქმისთვის.",
+    button: "სალაროს ტექნიკა",
     filterCategory: "pos",
-    image: "/images/produce-basket.webp",
-    imageAlt: "კალათა ახალი ხილითა და ბოსტნეულით",
-    decoration: "/images/broccoli.webp",
-    label: "RS Line-ის აქციები",
+    image: "/images/brand/pospoint-hero.webp",
+    imageAlt: "თანამედროვე სალაროს ტექნიკა pospoint-ის სივრცეში",
+    decoration: "/brand/mark.svg",
+    label: "pospoint-ის აქციები",
   },
 
   closing: {
-    title: ["მზად ხარ, შეავსო კალათა", "სიახლით?"],
-    text: "ახალი პროდუქტები, ყოველდღიური საჭიროებები და ექსკლუზიური შეთავაზებები - პირდაპირ კარამდე.",
-    button: "დაიწყე შოპინგი",
-    image: "/images/basket-footer.webp",
-    imageAlt: "კალათა ახალი პროდუქტებით",
+    title: ["თქვენი ბიზნესის", "შემდეგი ნაბიჯი."],
+    text: "სალაროს სისტემები, სავაჭრო ინვენტარი და ტექნიკური მხარდაჭერა ერთ სივრცეში.",
+    button: "ნახეთ კატალოგი",
+    image: "/images/brand/pospoint-hero.webp",
+    imageAlt: "pospoint-ის სალაროს სისტემები და პერიფერია",
   },
 
   footer: {
@@ -180,7 +180,7 @@ export const site = {
 
   // ---------- გვერდები ----------
   catalogPage: {
-    eyebrow: "RS LINE",
+    eyebrow: "POSPOINT",
     title: "კატალოგი",
     text: "ტექნიკა და ინვენტარი ვაჭრობის ავტომატიზაციისთვის.",
     demoNotice: "ფასები სატესტოა, ფოტოები კი საილუსტრაციო. მოდელი და კომპლექტაცია დააზუსტეთ კონსულტაციისას.",
@@ -226,7 +226,7 @@ export const site = {
       { type: "email", label: "ზოგადი ინფორმაცია", value: "info@rsline.ge", href: "mailto:info@rsline.ge" },
       { type: "email", label: "გაყიდვები", value: "sale@rsline.ge", href: "mailto:sale@rsline.ge" },
       { type: "address", label: "მისამართი", value: "თბილისი, ანა პოლიტკოვსკაიას ქ. 8ა", href: "https://maps.app.goo.gl/ub2ZSREJ3pLXSNcW6" },
-      { type: "facebook", label: "სოციალური ქსელი", value: "Facebook / RS Line", href: "https://www.facebook.com/RSline.ge" },
+      { type: "facebook", label: "სოციალური ქსელი", value: "Facebook / pospoint", href: "https://www.facebook.com/RSline.ge" },
     ],
     location: {
       eyebrow: "როგორ გვიპოვოთ",
@@ -234,7 +234,7 @@ export const site = {
       address: "ანა პოლიტკოვსკაიას ქ. 8ა",
       button: "მარშრუტის ნახვა",
       href: "https://maps.app.goo.gl/ub2ZSREJ3pLXSNcW6",
-      mapTitle: "RS Line - თბილისი, ანა პოლიტკოვსკაიას ქ. 8ა",
+      mapTitle: "pospoint - თბილისი, ანა პოლიტკოვსკაიას ქ. 8ა",
       mapSrc: "https://maps.google.com/maps?q=41.7196211%2C44.713616&hl=ka&z=17&output=embed",
       loading: "რუკა იტვირთება...",
       unavailable: "მდებარეობის სანახავად გახსენით Google Maps.",
@@ -280,7 +280,7 @@ export const site = {
       removeLabel: "{name} - რჩეულებიდან წაშლა",
     },
     auth: {
-      eyebrow: "მოგესალმებით RS LINE-ში",
+      eyebrow: "მოგესალმებით POSPOINT-ში",
       loginTitle: "კეთილი იყოს შენი დაბრუნება.",
       signupTitle: "შექმენი ანგარიში.",
       loginTab: "შესვლა",
@@ -294,7 +294,7 @@ export const site = {
       caption: "ეს ვიზუალური პროტოტიპია. ანგარიში არ იქმნება და წერილი არ იგზავნება.",
       successLogin: "შესვლის პრევიუ მზადაა.",
       successSignup: "რეგისტრაციის პრევიუ მზადაა.",
-      successText: "ასე გამოიყურება ეს ნაბიჯი RS Line-ში. ანგარიში არ შექმნილა და წერილი არ გაგზავნილა.",
+      successText: "ასე გამოიყურება ეს ნაბიჯი pospoint-ში. ანგარიში არ შექმნილა და წერილი არ გაგზავნილა.",
       successButton: "შოპინგის გაგრძელება",
     },
     coupon: { apply: "გააქტიურება", applied: "გააქტიურდა ✓" },

@@ -1,0 +1,131 @@
+/* ============================================================
+   ადმინ პანელი — იყენებს globals.css-ის ფერის ცვლადებს
+   ============================================================ */
+.adm { min-height: 100vh; background: var(--surface-alt); color: var(--ink); font-size: 14px; line-height: 1.5 }
+.adm h1 { margin: 0; font-size: 24px; font-weight: 600 }
+.adm h2 { margin: 0 0 16px; font-size: 16px; font-weight: 600 }
+.adm code { font-size: 12px; background: var(--surface); padding: 1px 6px; border-radius: 4px }
+.adm-muted { color: var(--gray-dark); font-weight: 400 }
+.adm-mono { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 12px }
+.adm-strong { font-weight: 600 }
+.adm-strong:hover { color: var(--primary) }
+.adm-strike { text-decoration: line-through }
+
+/* ---------- shell ---------- */
+.adm-shell { display: grid; grid-template-columns: 232px 1fr; min-height: 100vh }
+.adm-sidebar { position: sticky; top: 0; height: 100vh; display: flex; flex-direction: column; gap: 28px; padding: 24px 16px; background: var(--ink); color: #fff }
+.adm-logo { width: 140px; height: auto; margin: 0 8px }
+.adm-nav { display: grid; gap: 4px }
+.adm-nav a { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-radius: 8px; color: rgb(255 255 255 / .72) }
+.adm-nav a:hover { background: rgb(255 255 255 / .06); color: #fff }
+.adm-nav a.is-active { background: var(--primary); color: #fff }
+.adm-sidebar-foot { margin-top: auto; display: grid; gap: 4px; padding: 0 12px }
+.adm-sidebar-foot a, .adm-sidebar-foot button { padding: 6px 0; color: rgb(255 255 255 / .6); text-align: left }
+.adm-sidebar-foot a:hover, .adm-sidebar-foot button:hover { color: #fff }
+.adm-main { min-width: 0; padding: 32px clamp(16px, 4vw, 48px) 64px; display: grid; gap: 20px; align-content: start; max-width: 1280px }
+.adm-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap }
+.adm-head-actions { display: flex; gap: 8px }
+
+/* ---------- cards ---------- */
+.adm-card { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 20px }
+.adm-card-flush { padding: 0; overflow: hidden }
+.adm-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px }
+.adm-stat { display: grid; gap: 2px; transition: border-color .15s }
+.adm-stat:hover { border-color: var(--primary) }
+.adm-stat strong { font-size: 28px; font-weight: 600 }
+.adm-stat span { color: var(--gray-dark) }
+.adm-list { list-style: none; margin: 0; padding: 0 }
+.adm-list li { display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-top: 1px solid var(--line) }
+.adm-list li:first-child { border-top: 0 }
+.adm-list a:hover { color: var(--primary) }
+
+/* ---------- buttons ---------- */
+.adm-btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 38px; padding: 0 16px; border: 1px solid var(--line); border-radius: 8px; background: #fff; color: var(--ink); font-weight: 500; white-space: nowrap; transition: background .15s, border-color .15s }
+.adm-btn:hover:not(:disabled) { border-color: var(--gray) }
+.adm-btn .icon { width: 16px; height: 16px }
+.adm-btn-sm { min-height: 32px; padding: 0 12px; font-size: 13px }
+.adm-btn-primary { background: var(--primary); border-color: var(--primary); color: #fff }
+.adm-btn-primary:hover:not(:disabled) { background: var(--primary-hover); border-color: var(--primary-hover) }
+.adm-btn-danger { background: #c62828; border-color: #c62828; color: #fff }
+.adm-btn-danger:hover:not(:disabled) { background: #a51f1f; border-color: #a51f1f }
+.adm-btn-ghost-danger { color: #c62828 }
+.adm-btn-ghost-danger:hover:not(:disabled) { border-color: #c62828 }
+.adm-icon-btn { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 8px; color: var(--gray-dark) }
+.adm-icon-btn:hover { background: var(--surface); color: #c62828 }
+
+/* ---------- messages ---------- */
+.adm-alert { margin: 0; padding: 12px 14px; border-radius: 8px; background: #fff4e5; border: 1px solid #f5d7a8; color: #7a4a00 }
+.adm-success { margin: 0; padding: 12px 14px; border-radius: 8px; background: var(--primary-tint); border: 1px solid var(--primary-light); color: var(--primary-darker) }
+.adm-inline-error { color: #c62828; font-size: 13px }
+.adm-empty { margin: 0; padding: 32px; text-align: center; color: var(--gray-dark) }
+
+/* ---------- table ---------- */
+.adm-toolbar { display: flex; gap: 8px; flex-wrap: wrap; padding: 16px; border-bottom: 1px solid var(--line) }
+.adm-toolbar input { flex: 1 1 240px }
+.adm-toolbar select { flex: 0 1 260px }
+.adm-table-wrap { overflow-x: auto }
+.adm-table { width: 100%; border-collapse: collapse }
+.adm-table th { padding: 10px 16px; text-align: left; font-size: 12px; font-weight: 500; color: var(--gray-dark); background: var(--surface-alt); border-bottom: 1px solid var(--line); white-space: nowrap }
+.adm-table td { padding: 10px 16px; border-bottom: 1px solid var(--line); vertical-align: middle }
+.adm-table tr:last-child td { border-bottom: 0 }
+.adm-table tbody tr:hover { background: var(--surface-alt) }
+.adm-table .num { text-align: right; white-space: nowrap }
+.adm-table td:first-child { width: 64px; padding-right: 0 }
+.adm-thumb { width: 48px; height: 48px; border-radius: 8px; object-fit: cover; background: var(--surface); border: 1px solid var(--line) }
+.adm-thumb-empty { display: grid; place-items: center; color: var(--gray) }
+.adm-badges { white-space: nowrap }
+.adm-badge { display: inline-block; margin: 2px 4px 2px 0; padding: 2px 8px; border-radius: 99px; background: var(--primary-tint); color: var(--primary-darker); font-size: 12px }
+.adm-badge-muted { background: var(--surface); color: var(--gray-dark) }
+.adm-row-actions { text-align: right; white-space: nowrap }
+.adm-row-actions > * + * { margin-left: 6px }
+.adm-delete { display: inline-flex; align-items: center; gap: 6px; flex-wrap: wrap }
+
+/* ---------- forms ---------- */
+.adm-form { display: grid; gap: 16px }
+.adm-form-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start }
+.adm-form-grid > .adm-card { display: grid; gap: 14px }
+.adm-form-grid > .adm-card h2 { margin: 0 }
+.adm-field { display: grid; gap: 6px }
+.adm-field > span:first-child { font-weight: 500 }
+.adm-field small { font-size: 12px }
+.adm input:not([type=checkbox]):not([type=color]), .adm select, .adm textarea {
+  width: 100%; min-height: 40px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 8px; background: #fff; color: var(--ink); font: inherit
+}
+.adm textarea { resize: vertical; line-height: 1.5 }
+.adm input:focus, .adm select:focus, .adm textarea:focus { outline: 2px solid var(--primary); outline-offset: -1px; border-color: transparent }
+.adm input[readonly] { background: var(--surface-alt); color: var(--gray-dark) }
+.adm-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px }
+.adm-check { display: flex; gap: 10px; align-items: flex-start; cursor: pointer }
+.adm-check input { width: 18px; height: 18px; margin: 1px 0 0; accent-color: var(--primary) }
+.adm-spec { display: grid; grid-template-columns: 1fr 1fr 38px; gap: 8px }
+.adm-color { display: flex; align-items: center; gap: 10px }
+.adm-color input { width: 48px; height: 40px; padding: 2px; border: 1px solid var(--line); border-radius: 8px; background: #fff; cursor: pointer }
+.adm-icon-preview { display: grid; place-items: center; height: 96px; border-radius: 12px; border: 1px solid var(--line); color: var(--primary) }
+.adm-icon-preview .icon { width: 40px; height: 40px }
+.adm-image { display: flex; gap: 16px; align-items: flex-start }
+.adm-image-drop { flex: 0 0 auto; display: grid; place-items: center; width: 160px; aspect-ratio: 1; border: 1px dashed var(--gray); border-radius: 12px; background: var(--surface-alt); color: var(--gray-dark); overflow: hidden }
+.adm-image-drop:hover { border-color: var(--primary); color: var(--primary) }
+.adm-image-drop img { width: 100%; height: 100%; object-fit: cover }
+.adm-image-drop .icon { width: 32px; height: 32px }
+.adm-image-side { display: grid; gap: 8px; justify-items: start }
+.adm-form-foot { grid-column: 1 / -1; position: sticky; bottom: 0; display: grid; gap: 10px; padding: 14px 0; background: linear-gradient(transparent, var(--surface-alt) 30%) }
+.adm-form-actions { display: flex; align-items: center; gap: 8px; flex-wrap: wrap }
+.adm-spacer { flex: 1 }
+
+/* ---------- login ---------- */
+.adm-login { min-height: 100vh; display: grid; place-items: center; padding: 16px }
+.adm-login-card { width: min(380px, 100%); display: grid; gap: 20px; padding: 32px }
+.adm-login-card img { width: 160px; height: auto }
+
+/* ---------- mobile ---------- */
+@media (max-width: 860px) {
+  .adm-shell { grid-template-columns: 1fr }
+  .adm-sidebar { position: static; height: auto; flex-direction: row; flex-wrap: wrap; align-items: center; gap: 12px; padding: 12px 16px }
+  .adm-logo { width: 110px; margin: 0 }
+  .adm-nav { display: flex; order: 3; width: 100%; overflow-x: auto }
+  .adm-nav a { padding: 8px 10px; white-space: nowrap }
+  .adm-sidebar-foot { margin: 0 0 0 auto; display: flex; gap: 14px; padding: 0 }
+  .adm-main { padding-top: 20px }
+  .adm-form-grid { grid-template-columns: 1fr }
+  .adm-image-drop { width: 120px }
+}

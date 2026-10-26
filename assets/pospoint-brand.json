@@ -1,0 +1,28 @@
+{
+  "brand": "pospoint",
+  "palette": {
+    "cobalt": "#2458ED",
+    "ink": "#141B2D",
+    "chalk": "#F5F7FA",
+    "mist": "#DCE6FF"
+  },
+  "generatedWith": "Built-in image_gen tool",
+  "assets": [
+    {
+      "path": "public/images/brand/pospoint-hero.webp",
+      "source": "public/images/brand/pospoint-hero.png",
+      "use": "Optional brand campaign image. Homepage retains the original two-photo carousel at the user's request.",
+      "prompt": "Use-case: product-mockup. Create a premium photorealistic 3D studio campaign image for Pospoint, a modern POS and retail hardware brand. Landscape 3:2 composition, a beautifully designed matte graphite point-of-sale touchscreen terminal on a slim sculptural aluminum pedestal, a compact white and graphite thermal receipt printer with a small blank receipt and a wireless barcode scanner nearby. Three-quarter front view, terminal slightly angled left. Screen shows a tasteful minimalist point-of-sale interface with cobalt blue header, white item tiles, a tiny lime green confirmation circle, no legible text. Devices sit on a low rectangular cobalt blue plinth on a seamless softly lit pale icy blue studio floor and backdrop (#EAF0FC), subtle architectural curves in background. Materials are realistic, sharp bevels, quiet soft directional shadows, premium industrial design, restrained editorial art direction. Equipment fills 75 percent of image and is entirely within frame with breathing room. No people, no logos, no brand lettering, no floating graphic elements, no watermarks. This will be the right-hand visual of a light minimal Georgian ecommerce homepage; match vivid cobalt #2458ED, graphite #141B2D and tiny lime #D9F279 accents."
+    },
+    {
+      "path": "public/images/brand/pospoint-retail.webp",
+      "source": "public/images/brand/pospoint-retail.png",
+      "use": "Home company introduction; conceptual retail interior, not a client project photograph.",
+      "prompt": "Use-case: photorealistic-natural. A premium editorial architectural photograph for Pospoint retail technology business. A beautiful contemporary boutique shop checkout area in Tbilisi with a graphite POS touchscreen terminal and small receipt printer on a pale limestone counter in foreground, organized minimalist retail shelving with neutral homeware in background, electric cobalt blue custom lower counter cabinetry, one small lime-green object as accent, warm natural window light, pale cream walls, refined real materials, soft shadows, authentic functional store. Wide landscape 3:2 composition, camera slightly left of the counter, clean and inviting, no people, no text, no logos, no watermarks, no exaggerated lighting. Distinctive but credible commercial interior photograph, perfectly straight vertical lines, tactile modern architectural style."
+    }
+  ],
+  "notes": [
+    "The final UI palette has no green/lime accent, as requested. Existing product photographs and original hero photographs are retained.",
+    "SVG brand assets are original editable vectors. Contact destinations remain unchanged until replacement operational addresses are supplied."
+  ]
+}

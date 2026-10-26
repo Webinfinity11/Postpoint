@@ -102,7 +102,7 @@ export function BrandLoader() {
             <span className="brand-loader__corner brand-loader__corner--br" />
             {/* A local SVG avoids a request to an image optimization service. */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img className="brand-loader__logo" src="/logo.svg" width="212" height="67" alt="" />
+            <img className="brand-loader__logo" src="/logo.svg" width="220" height="40" alt="" />
             <span className="brand-loader__scan" />
           </div>
           <span className="brand-loader__label">

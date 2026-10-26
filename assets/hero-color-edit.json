@@ -1,0 +1,18 @@
+{
+  "method": "Built-in image_gen editing; WebP encoding with Sharp",
+  "purpose": "Replace the baked-in green hero color grade with Pospoint cobalt #2458ED and ink #141B2D. Keep original subjects, framing, 3:1 dimensions, natural skin tone and carousel.",
+  "assets": [
+    {
+      "original": "public/images/hero1.webp",
+      "edited": "public/images/brand/hero1-pospoint.png",
+      "web": "public/images/brand/hero1-pospoint.webp",
+      "prompt": "Use case: lighting-weather. Edit the supplied existing website hero photograph with a strictly restrained COLOR GRADING change only. Preserve the exact ultra-wide 3:1 panorama, original framing, camera angle, subject geometry, every object's position, depth of field, photographic softness, and large dark empty copy-space on the LEFT. Do not crop, recompose, add or remove anything. Remove the baked-in forest-green/emerald color wash from the photograph completely. Regrade it to Pospoint brand colors: deep graphite/navy shadows based on #141B2D, cobalt-blue practical light and reflections based on #2458ED, subtle cool neutral silvery highlights. Highlights must be BLUE rather than green, teal, cyan or purple. Keep the left side quietly dark navy for white website text, and preserve realistic contrast and surface texture. No typography, logos, graphics, borders or watermarks. Specific invariants: keep the solitary payment card terminal on the metal checkout counter in the right third, with its same silhouette, keypad and screen, and the same blurred shop lights behind it. Change the green light/reflection on the counter and terminal edges to tasteful cobalt blue."
+    },
+    {
+      "original": "public/images/hero2.webp",
+      "edited": "public/images/brand/hero2-pospoint.png",
+      "web": "public/images/brand/hero2-pospoint.webp",
+      "prompt": "Use case: lighting-weather. Edit the supplied existing website hero photograph with a strictly restrained COLOR GRADING change only. Preserve the exact ultra-wide 3:1 panorama, original framing, camera angle, subject geometry, every object's position, depth of field, photographic softness, and large dark empty copy-space on the LEFT. Do not crop, recompose, add or remove anything. Remove the baked-in forest-green/emerald color wash from the photograph completely. Regrade it to Pospoint brand colors: deep graphite/navy shadows based on #141B2D, cobalt-blue practical light and reflections based on #2458ED, subtle cool neutral silvery highlights. Highlights must be BLUE rather than green, teal, cyan or purple. Keep the left side quietly dark navy for white website text, and preserve realistic contrast and surface texture. No typography, logos, graphics, borders or watermarks. Specific invariants: keep the same hand and arm, natural human skin tone, pale sleeve, card and payment terminal on the right exactly as in the source. Skin should remain natural and warm, not tinted blue. Recolor only the green environmental cast, background lights and terminal reflections to muted cobalt blue and deep navy."
+    }
+  ]
+}

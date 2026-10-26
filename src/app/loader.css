@@ -41,7 +41,7 @@
   position: absolute;
   width: 18px;
   height: 18px;
-  border-color: var(--primary, #50b649);
+  border-color: var(--primary, #2458ed);
   border-style: solid;
   border-width: 0;
   opacity: .65;
@@ -58,8 +58,8 @@
   bottom: 14px;
   left: 0;
   width: 48px;
-  background: linear-gradient(90deg, transparent, #50b64918);
-  border-right: 2px solid var(--primary, #50b649);
+  background: linear-gradient(90deg, transparent, #2458ed18);
+  border-right: 2px solid var(--primary, #2458ed);
   transform: translateX(-50px);
   animation: brand-loader-scan 1450ms cubic-bezier(.45, 0, .25, 1) infinite;
 }
@@ -73,7 +73,7 @@
   line-height: 1.6;
 }
 
-.brand-loader__dot { width: 5px; height: 5px; border-radius: 50%; background: var(--primary, #50b649); }
+.brand-loader__dot { width: 5px; height: 5px; border-radius: 50%; background: var(--primary, #2458ed); }
 
 @keyframes brand-loader-scan {
   0% { transform: translateX(-50px); opacity: 0; }

@@ -39,7 +39,7 @@ export function WeeklyBest() {
 
   return (
     <section className="weekly-section section-pad" id="weekly" aria-labelledby="weekly-title">
-      <SectionHeading id="weekly-title" title={site.sections.weekly} action={<PillLink href={`/catalog/${weekly}`}>{site.sections.viewCategory}</PillLink>}>
+      <SectionHeading id="weekly-title" eyebrow="03 / ზუსტად ის, რაც გჭირდებათ" title={site.sections.weekly} action={<PillLink href={`/catalog/${weekly}`}>{site.sections.viewCategory}</PillLink>}>
         <p className="results-description">{site.sections.weeklyDescription}</p>
       </SectionHeading>
       <div className="category-tabs" role="tablist" aria-label={site.sections.weeklyTabs} ref={tabsRef} onKeyDown={onKeyDown}>

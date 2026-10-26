@@ -27,7 +27,7 @@ export function ProductCard({ product }: { product: Product }) {
         <Heart className="icon" strokeWidth={1.65} aria-hidden="true" />
       </button>
       <Link href={href} className="product-picture" aria-label={fill(site.product.view, { name: product.name })}>
-        <ProductImage product={product} width={160} height={130} />
+        <ProductImage product={product} width={400} height={320} />
       </Link>
       <h3>
         <Link href={href} className="product-name">

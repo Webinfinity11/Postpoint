@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="640" viewBox="0 0 640 640" fill="none">
+  <title>Pospoint connection grid</title>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1.5" fill="#2458ED" opacity=".18"/></pattern>
+  </defs>
+  <path fill="url(#grid)" d="M0 0h640v640H0z"/>
+  <path d="M60 500h160a80 80 0 0 0 80-80V220a80 80 0 0 1 80-80h200" stroke="#2458ED" stroke-width="2" opacity=".24"/>
+  <circle cx="60" cy="500" r="7" fill="#2458ED"/>
+  <circle cx="300" cy="300" r="12" fill="#DCE6FF"/>
+  <circle cx="580" cy="140" r="7" fill="#2458ED"/>
+</svg>

@@ -1,173 +1,233 @@
 {
-  "version": 1,
-  "project": {
-    "name": "rsline",
-    "productType": "Retail equipment catalog",
-    "stack": [
-      "nextjs",
-      "react",
-      "tailwind-v4"
-    ]
-  },
-  "sources": {
-    "tokens": [
-      "src/app/globals.css"
-    ],
-    "components": [
-      "src/components/ui"
-    ],
-    "assets": [
-      "public/images"
-    ],
-    "instructions": []
-  },
-  "design": {
-    "colorMode": "light",
-    "colors": {
-      "--primary": {
-        "value": "#50b649",
-        "source": "src/app/globals.css"
-      },
-      "--primary-hover": {
-        "value": "#3f9a39",
-        "source": "src/app/globals.css"
-      },
-      "--primary-dark": {
-        "value": "#2e7a2a",
-        "source": "src/app/globals.css"
-      },
-      "--primary-darker": {
-        "value": "#1f5a1b",
-        "source": "src/app/globals.css"
-      },
-      "--primary-light": {
-        "value": "#b9e6b5",
-        "source": "src/app/globals.css"
-      },
-      "--primary-soft": {
-        "value": "#d6efd3",
-        "source": "src/app/globals.css"
-      },
-      "--primary-tint": {
-        "value": "#eef8ed",
-        "source": "src/app/globals.css"
-      },
-      "--muted": {
-        "value": "var(--gray-dark)",
-        "source": "src/app/globals.css"
-      },
-      "--color-primary": {
-        "value": "var(--primary)",
-        "source": "src/app/globals.css"
-      },
-      "--color-primary-hover": {
-        "value": "var(--primary-hover)",
-        "source": "src/app/globals.css"
-      },
-      "--color-primary-dark": {
-        "value": "var(--primary-dark)",
-        "source": "src/app/globals.css"
-      },
-      "--color-primary-light": {
-        "value": "var(--primary-light)",
-        "source": "src/app/globals.css"
-      },
-      "--color-primary-tint": {
-        "value": "var(--primary-tint)",
-        "source": "src/app/globals.css"
-      },
-      "--color-gray-brand": {
-        "value": "var(--gray)",
-        "source": "src/app/globals.css"
-      },
-      "--color-muted": {
-        "value": "var(--muted)",
-        "source": "src/app/globals.css"
-      },
-      "--color-line": {
-        "value": "var(--line)",
-        "source": "src/app/globals.css"
-      },
-      "--color-surface": {
-        "value": "var(--surface)",
-        "source": "src/app/globals.css"
-      },
-      "--color-ink": {
-        "value": "var(--ink)",
-        "source": "src/app/globals.css"
-      }
-    },
-    "typography": {
-      "--font": {
-        "value": "var(--font-inter), var(--font-georgian), Arial, Helvetica, sans-serif",
-        "source": "src/app/globals.css"
-      },
-      "--font-sans": {
-        "value": "var(--font)",
-        "source": "src/app/globals.css"
-      }
-    },
-    "spacing": {},
-    "radius": {
-      "--radius": {
-        "value": "22px",
-        "source": "src/app/globals.css"
-      }
-    },
-    "shadows": {},
-    "motion": {},
-    "density": "comfortable"
-  },
-  "components": {
-    "installed": [
-      "Breadcrumbs",
-      "CategoryIcon",
-      "Lines",
-      "Logo",
-      "PillButton",
-      "SectionHeading",
-      "CategoryCard"
-    ],
-    "preferredPrimitives": [],
-    "patterns": []
-  },
-  "constraints": {
-    "must": [],
-    "avoid": []
-  },
-  "decisions": [
-    "Use one centered content area with a maximum width of 90% of the viewport and a 1600px cap. Align the header, hero, section content, inner pages, and footer content to the same edges; preserve full-width section backgrounds.",
-    "Homepage popular categories use a continuous infinite carousel with four cards on desktop, two on tablets, and a single card with the next card partly visible on phones. Reuse CategoryCard; support touch dragging, previous/next arrows, pause on hover or focus, keyboard navigation, and reduced motion.",
-    "Keep the homepage focused on the original two-slide hero carousel, the existing category carousel, eight featured products across the six business categories, an interactive product section with category tabs, and a compact company introduction. Remove repeated promotional banners.",
-    "Restore both original hero photographs, Georgian slide copy, catalog and company links. Crossfade every six seconds with previous/next arrows and dot controls; pause on hover, focus, reduced motion, hidden tabs, or when offscreen. Preserve the centered 90%/1600px content width.",
-    "The category product section shows every product in the selected category without reloading. Use green selected tabs with keyboard navigation and horizontal scrolling on phones and tablets; keep its selection independent of the header search.",
-    "Use the RS Line logo with a restrained green scanning animation for the first document load. Fade it away when ready, skip on interaction or reduced motion, and fail open if loading or hydration stalls. Do not show it during client route navigation."
-  ],
-  "evidence": [
-    {
-      "fact": "components.installed",
-      "source": "src/components/ui"
-    },
-    {
-      "fact": "design.tokens",
-      "source": "src/app/globals.css"
-    },
-    {
-      "fact": "project.stack:nextjs",
-      "source": "package.json"
-    },
-    {
-      "fact": "project.stack:react",
-      "source": "package.json"
-    },
-    {
-      "fact": "project.stack:tailwind-v4",
-      "source": "package.json"
-    },
-    {
-      "fact": "design.colorMode:light",
-      "source": "src/app/globals.css body and page surfaces"
-    }
-  ],
-  "generatedAt": "2026-10-22T14:31:40.919Z"
+    "version":  1,
+    "project":  {
+                    "name":  "pospoint",
+                    "productType":  "Retail equipment catalog",
+                    "stack":  [
+                                  "nextjs",
+                                  "react",
+                                  "tailwind-v4"
+                              ]
+                },
+    "sources":  {
+                    "tokens":  [
+                                   "src/app/globals.css",
+                                   "src/app/pospoint.css",
+                                   "src/app/brand-components.css"
+                               ],
+                    "components":  [
+                                       "src/components/ui"
+                                   ],
+                    "assets":  [
+                                   "public/brand",
+                                   "public/images"
+                               ],
+                    "instructions":  [
+
+                                     ]
+                },
+    "design":  {
+                   "colorMode":  "light",
+                   "colors":  {
+                                  "--muted":  {
+                                                  "value":  "var(--gray-dark)",
+                                                  "source":  "src/app/globals.css"
+                                              },
+                                  "--color-primary":  {
+                                                          "value":  "var(--primary)",
+                                                          "source":  "src/app/globals.css"
+                                                      },
+                                  "--color-primary-hover":  {
+                                                                "value":  "var(--primary-hover)",
+                                                                "source":  "src/app/globals.css"
+                                                            },
+                                  "--color-primary-dark":  {
+                                                               "value":  "var(--primary-dark)",
+                                                               "source":  "src/app/globals.css"
+                                                           },
+                                  "--color-primary-light":  {
+                                                                "value":  "var(--primary-light)",
+                                                                "source":  "src/app/globals.css"
+                                                            },
+                                  "--color-primary-tint":  {
+                                                               "value":  "var(--primary-tint)",
+                                                               "source":  "src/app/globals.css"
+                                                           },
+                                  "--color-gray-brand":  {
+                                                             "value":  "var(--gray)",
+                                                             "source":  "src/app/globals.css"
+                                                         },
+                                  "--color-muted":  {
+                                                        "value":  "var(--muted)",
+                                                        "source":  "src/app/globals.css"
+                                                    },
+                                  "--color-line":  {
+                                                       "value":  "var(--line)",
+                                                       "source":  "src/app/globals.css"
+                                                   },
+                                  "--color-surface":  {
+                                                          "value":  "var(--surface)",
+                                                          "source":  "src/app/globals.css"
+                                                      },
+                                  "--color-ink":  {
+                                                      "value":  "var(--ink)",
+                                                      "source":  "src/app/globals.css"
+                                                  },
+                                  "--primary":  {
+                                                    "value":  "#2458ED",
+                                                    "source":  "src/app/globals.css"
+                                                },
+                                  "--primary-hover":  {
+                                                          "value":  "#1946CF",
+                                                          "source":  "src/app/globals.css"
+                                                      },
+                                  "--primary-dark":  {
+                                                         "value":  "#1946CF",
+                                                         "source":  "src/app/globals.css"
+                                                     },
+                                  "--primary-darker":  {
+                                                           "value":  "#173998",
+                                                           "source":  "src/app/globals.css"
+                                                       },
+                                  "--primary-light":  {
+                                                          "value":  "#C4D3FF",
+                                                          "source":  "src/app/globals.css"
+                                                      },
+                                  "--primary-soft":  {
+                                                         "value":  "#E0E8FF",
+                                                         "source":  "src/app/globals.css"
+                                                     },
+                                  "--primary-tint":  {
+                                                         "value":  "#EFF3FF",
+                                                         "source":  "src/app/globals.css"
+                                                     },
+                                  "--accent":  {
+                                                   "value":  "#DCE6FF",
+                                                   "source":  "src/app/globals.css"
+                                               },
+                                  "--ink":  {
+                                                "value":  "#141B2D",
+                                                "source":  "src/app/globals.css"
+                                            },
+                                  "--surface":  {
+                                                    "value":  "#F0F3F8",
+                                                    "source":  "src/app/globals.css"
+                                                },
+                                  "--surface-alt":  {
+                                                        "value":  "#F5F7FA",
+                                                        "source":  "src/app/globals.css"
+                                                    },
+                                  "--line":  {
+                                                 "value":  "#E1E5EC",
+                                                 "source":  "src/app/globals.css"
+                                             },
+                                  "--gray":  {
+                                                 "value":  "#8992A5",
+                                                 "source":  "src/app/globals.css"
+                                             },
+                                  "--gray-dark":  {
+                                                      "value":  "#606A7D",
+                                                      "source":  "src/app/globals.css"
+                                                  },
+                                  "--gray-soft":  {
+                                                      "value":  "#E7EAF0",
+                                                      "source":  "src/app/globals.css"
+                                                  }
+                              },
+                   "typography":  {
+                                      "--font":  {
+                                                     "value":  "var(--font-inter), var(--font-georgian), Arial, Helvetica, sans-serif",
+                                                     "source":  "src/app/globals.css"
+                                                 },
+                                      "--font-sans":  {
+                                                          "value":  "var(--font)",
+                                                          "source":  "src/app/globals.css"
+                                                      }
+                                  },
+                   "spacing":  {
+
+                               },
+                   "radius":  {
+                                  "--radius":  {
+                                                   "value":  "16px",
+                                                   "source":  "src/app/globals.css"
+                                               }
+                              },
+                   "shadows":  {
+
+                               },
+                   "motion":  {
+
+                              },
+                   "density":  "comfortable"
+               },
+    "components":  {
+                       "installed":  [
+                                         "Breadcrumbs",
+                                         "CategoryIcon",
+                                         "Lines",
+                                         "Logo",
+                                         "PillButton",
+                                         "SectionHeading",
+                                         "CategoryCard"
+                                     ],
+                       "preferredPrimitives":  [
+
+                                               ],
+                       "patterns":  [
+
+                                    ]
+                   },
+    "constraints":  {
+                        "must":  [
+                                     "Keep the original two-slide homepage hero carousel and original hero1.webp and hero2.webp image compositions. Display recolored public/images/brand/hero1-pospoint.webp and hero2-pospoint.webp variants in cobalt/navy with no green or lime tint, per the latest user direction.",
+                                     "Use the lowercase pospoint identity and cobalt, ink, chalk, and mist palette across every route and interaction.",
+                                     "Preserve operational contact destinations and existing cart/favorites persistence keys.",
+                                     "Retain Georgian interface copy, readable contrast, keyboard focus, responsive layouts, and reduced-motion behavior."
+                                 ],
+                        "avoid":  [
+                                      "Green or lime brand accents.",
+                                      "Replacing the original hero carousel with a static split hero.",
+                                      "Invented business contacts or operational claims."
+                                  ]
+                    },
+    "decisions":  [
+                      "Use the original geometric p/point symbol and path-based lowercase pospoint wordmark. Logo variants share a 352 by 64 viewBox; use the pale-blue light variant on dark surfaces.",
+                      "Use cobalt #2458ED for primary actions, ink #141B2D for text and the footer, chalk #F5F7FA for quiet surfaces, and mist #DCE6FF for restrained accents.",
+                      "Preserve one centered content area at 90% of the viewport with a 1600px cap and aligned section edges.",
+                      "Retain the original two-slide hero carousel and photo compositions through recolored hero1-pospoint.webp and hero2-pospoint.webp variants. Use cobalt/navy grading and ink overlays without green or lime tint. Preserve Georgian copy, catalog/company links, carousel controls, pause behavior, and reduced-motion support.",
+                      "Keep the category carousel, eight featured products, interactive category product tabs, and compact company introduction. Use cobalt selected states and neutral-blue category surfaces.",
+                      "Use Inter for Latin text and numerals with TWS Ajara TV Mt for Georgian; the custom logo is vector artwork and does not depend on a font.",
+                      "Use restrained 8px control corners, 12px product/category cards, 16px larger surfaces, quiet borders, and generous spacing.",
+                      "Keep generated pospoint-hero.webp and pospoint-retail.webp available as brand assets; the homepage retains its original carousel and photo compositions through recolored hero1-pospoint.webp and hero2-pospoint.webp variants.",
+                      "Provide downloadable identity assets and a static local reference at public/brand/index.html.",
+                      "Use the Pospoint logo with a restrained cobalt scanning animation on first document load; skip on interaction or reduced motion and fail open."
+                  ],
+    "evidence":  [
+                     {
+                         "fact":  "components.installed",
+                         "source":  "src/components/ui"
+                     },
+                     {
+                         "fact":  "design.tokens",
+                         "source":  "src/app/globals.css"
+                     },
+                     {
+                         "fact":  "project.stack:nextjs",
+                         "source":  "package.json"
+                     },
+                     {
+                         "fact":  "project.stack:react",
+                         "source":  "package.json"
+                     },
+                     {
+                         "fact":  "project.stack:tailwind-v4",
+                         "source":  "package.json"
+                     },
+                     {
+                         "fact":  "design.colorMode:light",
+                         "source":  "src/app/globals.css body and page surfaces"
+                     }
+                 ],
+    "generatedAt":  "2026-10-26"
 }

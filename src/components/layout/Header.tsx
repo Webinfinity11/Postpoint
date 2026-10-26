@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname, useRouter } from "next/navigation";
-import { Heart, Search, ShoppingBag, X } from "lucide-react";
+import { ArrowUpRight, Heart, Phone, Search, ShoppingBag, X } from "lucide-react";
 import { site } from "@/data/site";
 import { useCart } from "@/store/cart";
 import { useFavorites } from "@/store/favorites";
@@ -18,13 +18,21 @@ export function Header() {
   const { query, setQuery, clearFilters, openCart, openModal } = useUi();
   const pathname = usePathname();
   const router = useRouter();
+  const phone = site.contactPage.items.find((item) => item.type === "phone");
   // Home filters its own product list; on every other page the search shows results in /catalog
   const searchHere = pathname === "/" || pathname === "/catalog";
 
   return (
     <header className="site-header">
+      <div className="header-utility">
+        <p><span className="header-point" aria-hidden="true" />{site.tagline}</p>
+        <div className="header-utility-links">
+          {phone && <a href={phone.href}><Phone {...ic} />{phone.value}</a>}
+          <button type="button" onClick={() => openModal({ type: "support" })}>{site.nav.support}<ArrowUpRight {...ic} /></button>
+        </div>
+      </div>
       <div className="header-main">
-        <Logo height={40} />
+        <Logo height={34} />
 
         <MainNav />
 
@@ -58,12 +66,12 @@ export function Header() {
         </form>
 
         <div className="header-actions">
-          <button type="button" className="text-button" onClick={() => openModal({ type: "favorites" })} aria-label={site.header.loved}>
+          <button type="button" className="text-button header-favorites" onClick={() => openModal({ type: "favorites" })} aria-label={site.header.loved}>
             <Heart {...ic} />
             <span>{site.header.loved}</span>
             {favCount > 0 && <b className="small-count">{favCount}</b>}
           </button>
-          <button type="button" className="text-button" onClick={openCart} aria-label={fill(site.header.cartLabel, { count: cartCount })}>
+          <button type="button" className="text-button header-cart" onClick={openCart} aria-label={fill(site.header.cartLabel, { count: cartCount })}>
             <ShoppingBag {...ic} />
             <span>{site.header.cart}</span>
             <b className="small-count">{cartCount}</b>

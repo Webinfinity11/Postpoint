@@ -1,7 +1,7 @@
 import type { Category } from "@/types";
 
 // Source: https://darkred-gaur-221374.hostingersite.com/products/
-// Category photographs generated for RS Line with image_gen.
+// Category photographs generated for pospoint with image_gen.
 export const categories: Category[] = [
   {
     "id": "pos",
@@ -11,7 +11,7 @@ export const categories: Category[] = [
     "note": "ფულის უჯრის ზომების ერთეული და კონკრეტული მოდელის პარამეტრები დააზუსტეთ კონსულტანტთან.",
     "image": "/images/categories/pos.webp",
     "icon": "monitor",
-    "tint": "#eef8ed"
+    "tint": "#EDF2FF"
   },
   {
     "id": "warehouse-tech",
@@ -20,7 +20,7 @@ export const categories: Category[] = [
     "caption": "ინვენტარიზაცია და მარკირება",
     "image": "/images/categories/warehouse-tech.webp",
     "icon": "scan",
-    "tint": "#f3f5f6"
+    "tint": "#F2F4F8"
   },
   {
     "id": "market-equipment",
@@ -30,7 +30,7 @@ export const categories: Category[] = [
     "note": "კონკრეტული მოდელის ზომები და კომპლექტაცია დააზუსტეთ კონსულტანტთან.",
     "image": "/images/categories/market-equipment.webp",
     "icon": "cart",
-    "tint": "#e4f3e2"
+    "tint": "#E9EFFB"
   },
   {
     "id": "market-accessories",
@@ -39,7 +39,7 @@ export const categories: Category[] = [
     "caption": "ურიკები და კალათები",
     "image": "/images/categories/market-accessories.webp",
     "icon": "tags",
-    "tint": "#e9edef"
+    "tint": "#F0F2F6"
   },
   {
     "id": "shelving",
@@ -49,7 +49,7 @@ export const categories: Category[] = [
     "note": "დატვირთვის პირობები და სექციის კონფიგურაცია შეათანხმეთ კონსულტანტთან.",
     "image": "/images/categories/shelving.webp",
     "icon": "warehouse",
-    "tint": "#d6efd3"
+    "tint": "#E7EDFA"
   },
   {
     "id": "security",
@@ -58,6 +58,6 @@ export const categories: Category[] = [
     "caption": "დაცვა, კონტროლი და აღრიცხვა",
     "image": "/images/categories/security.webp",
     "icon": "cctv",
-    "tint": "#dde2e5"
+    "tint": "#ECEFF5"
   }
 ];

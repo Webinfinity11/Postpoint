@@ -15,6 +15,8 @@ export type Category = {
   icon: CategoryIconName;
   /** Card background tint */
   tint: string;
+  /** Position in lists (smaller = first); set from the admin panel */
+  sortOrder?: number;
 };
 
 export type Product = {
@@ -34,6 +36,8 @@ export type Product = {
   isWeeklyPick?: boolean;
   /** Position in "Most Selling Products" (1 = first). Empty = not shown */
   bestSellerRank?: number;
+  /** Position in lists (smaller = first); set from the admin panel */
+  sortOrder?: number;
 };
 
 export type OfferTheme = "green" | "gray" | "light";

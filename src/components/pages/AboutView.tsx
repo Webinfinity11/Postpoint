@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Check } from "lucide-react";
 import { aboutPage } from "@/data/about";
+import { site } from "@/data/site";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { PillLink } from "@/components/ui/PillButton";
 
@@ -15,7 +16,7 @@ export function AboutView() {
       <Breadcrumbs items={[{ label: t.title }]} />
 
       <header className="page-head about-page-head">
-        <span className="page-eyebrow">RS LINE</span>
+        <span className="page-eyebrow">{site.name}</span>
         <h1>{t.title}</h1>
         <p className="page-lead">{t.lead}</p>
       </header>

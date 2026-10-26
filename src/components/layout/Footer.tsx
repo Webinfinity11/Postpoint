@@ -19,6 +19,7 @@ export function Footer() {
       <div className="footer-inner section-pad">
         <div className="footer-cta">
           <div>
+            <span className="footer-eyebrow">შემდეგი ნაბიჯი თქვენი ბიზნესისთვის</span>
             <h2>{t.ctaTitle}</h2>
             <p>{t.ctaText}</p>
           </div>
@@ -29,7 +30,7 @@ export function Footer() {
 
         <div className="footer-main">
           <div className="footer-brand">
-            <Logo height={40} />
+            <Logo height={40} variant="light" />
             <p>{t.description}</p>
             {facebook && (
               <a className="footer-social" href={facebook.href} target="_blank" rel="noopener noreferrer" aria-label={facebook.value}>
@@ -88,6 +89,7 @@ export function Footer() {
 
         <div className="footer-bottom">
           <p>© {new Date().getFullYear()} {site.name}. {t.rights}</p>
+          <span className="footer-signature">Your next point.</span>
           <button
             className="footer-back-top"
             type="button"

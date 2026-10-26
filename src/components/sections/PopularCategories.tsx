@@ -8,7 +8,7 @@ import { CategoryCarousel } from "@/components/product/CategoryCarousel";
 export function PopularCategories() {
   return (
     <section className="categories-section section-pad" aria-labelledby="categories-title">
-      <SectionHeading id="categories-title" title={site.sections.categories} action={<PillLink href="/catalog">{site.sections.showAll}</PillLink>} />
+      <SectionHeading id="categories-title" eyebrow="01 / იპოვეთ თქვენი მიმართულება" title="გადაწყვეტილება ყველა ბიზნესისთვის" action={<PillLink href="/catalog">{site.sections.showAll}</PillLink>} />
       <CategoryCarousel />
     </section>
   );

@@ -1,0 +1,202 @@
+/* Pospoint — shared storefront components. */
+.site-header { position: relative; z-index: 45; background: #fff; border-bottom: 1px solid var(--line) }
+.header-utility { display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 38px; border-bottom: 1px solid var(--line); color: var(--muted); font-size: 10px }
+.header-utility p { display: flex; align-items: center; gap: 9px; margin: 0; line-height: 1.5 }
+.header-point { display: inline-block; width: 6px; height: 6px; flex: 0 0 6px; border-radius: 50%; background: var(--primary) }
+.header-utility-links { display: flex; align-items: center; gap: 26px }
+.header-utility-links a, .header-utility-links button { display: inline-flex; align-items: center; gap: 7px; min-height: 36px; padding: 0; font-size: 10px }
+.header-utility-links a { font-family: var(--font-inter), Arial, sans-serif; letter-spacing: .015em }
+.header-utility-links .icon { width: 12px; height: 12px }
+.header-utility-links a:hover, .header-utility-links button:hover { color: var(--primary) }
+.site-header .header-main { min-height: 94px; gap: 30px; padding: 18px 0 }
+.site-header .brand img { height: 34px; width: auto }
+.site-header .main-nav { margin: 0 auto 0 10px; gap: 3px }
+.site-header .nav-link { min-height: 44px; padding: 10px 13px; border-radius: 8px; font-size: 12px; font-weight: 500; line-height: 1.5 }
+.site-header .nav-link::after { display: none }
+.site-header .nav-link:hover, .site-header .nav-link.active { color: var(--primary) }
+.site-header .catalog-trigger { gap: 8px; background: var(--primary-tint); color: var(--primary); padding-inline: 14px }
+.site-header .catalog-trigger:hover, .site-header .catalog-wrap.open .catalog-trigger { background: var(--primary); color: #fff }
+.site-header .catalog-grid-icon { width: 15px; height: 15px }
+.site-header .nav-chevron { width: 12px !important; height: 12px !important; margin-left: 2px }
+.site-header .search-form { width: clamp(190px, 20vw, 310px); height: 44px; gap: 10px; border: 1px solid transparent; border-radius: 8px; padding: 0 14px; background: var(--surface); margin-left: 0 }
+.site-header .search-form:focus-within { border-color: var(--primary); box-shadow: 0 0 0 3px #2458ed14; background: #fff }
+.site-header .search-form input { font-size: 11px }
+.site-header .search-form input::placeholder { color: var(--muted) }
+.site-header .search-reset { min-width: 28px; min-height: 32px; align-items: center; justify-content: center }
+.site-header .header-actions { gap: 10px }
+.site-header .header-actions .text-button { position: relative; justify-content: center; min-height: 44px; min-width: 44px; padding: 10px; gap: 8px; border: 1px solid var(--line); border-radius: 8px; font-size: 11px; transition: background .2s, border-color .2s }
+.site-header .header-actions .icon { width: 19px; height: 19px }
+.site-header .header-actions .header-favorites > span { display: none }
+.site-header .header-actions .header-favorites:hover { background: var(--primary-tint); border-color: var(--primary) }
+.site-header .header-actions .header-cart { padding-inline: 14px; color: #fff; background: var(--ink); border-color: var(--ink) }
+.site-header .header-actions .header-cart:hover { background: var(--primary); border-color: var(--primary) }
+.site-header .header-cart .small-count { background: #dce6ff; color: #141b2d; font-family: var(--font-inter), Arial, sans-serif; min-width: 19px; height: 19px; font-size: 10px }
+.site-header .header-favorites .small-count { position: absolute; top: -5px; right: -5px; box-shadow: 0 0 0 2px #fff }
+.site-header .catalog-menu { left: 0; top: calc(100% + 12px); width: 560px; max-width: 90vw; padding: 16px; border-radius: 14px; box-shadow: 0 18px 50px #141b2d18; transform: translate(0, 10px) scale(.98); transform-origin: top left }
+.site-header .catalog-menu::before { display: none }
+.site-header .catalog-wrap.open .catalog-menu { transform: translate(0, 0) scale(1) }
+.site-header .catalog-item { padding: 12px; border-radius: 9px }
+.site-header .catalog-thumb { border-radius: 7px }
+.site-header .catalog-thumb img { object-fit: contain }
+.site-header .catalog-text strong { font-size: 12px; line-height: 1.55 }
+.site-header .catalog-text small { font-size: 10px; line-height: 1.5 }
+.site-header .catalog-all { justify-content: space-between; border-radius: 8px; padding: 14px 16px; font-size: 12px; color: var(--primary); background: var(--primary-tint) }
+.site-header .catalog-all:hover { color: #fff; background: var(--primary) }
+
+/* A retail setting and a clear promise connect the catalogue to the people behind it. */
+.home-about.pospoint-about { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: clamp(36px, 6vw, 96px); padding-top: 96px; padding-bottom: 96px; background: #fff }
+.pospoint-about .home-about-photo { position: relative; border-radius: 16px; overflow: hidden; background: var(--surface); align-self: stretch; min-height: 480px }
+.pospoint-about .home-about-photo > img { width: 100%; height: 100%; min-height: 480px; aspect-ratio: 1.15; object-fit: cover; object-position: 65% center }
+.home-about-photo-label { position: absolute; right: 20px; bottom: 20px; left: 20px; display: flex; align-items: center; justify-content: space-between; gap: 14px; min-height: 70px; padding: 18px 22px; background: #dce6ff; color: #141b2d; border-radius: 10px }
+.home-about-photo-label > span { display: flex; align-items: center; gap: 10px; font-size: 12px; line-height: 1.7 }
+.home-about-photo-label i { display: block; width: 8px; height: 8px; border-radius: 50%; background: #141b2d; flex: 0 0 8px }
+.home-about-photo-label > .icon { width: 24px; height: 24px }
+.pospoint-about .home-about-copy { padding-block: 12px }
+.pospoint-about .home-about-copy .page-eyebrow { display: inline-flex; align-items: center; gap: 9px; color: var(--muted); margin-bottom: 23px; font-size: 11px; letter-spacing: 0 }
+.pospoint-about .page-eyebrow > span { display: block; width: 7px; height: 7px; border-radius: 50%; background: var(--primary) }
+.pospoint-about h2 { max-width: 540px; font-size: clamp(27px, 3vw, 42px); line-height: 1.45; letter-spacing: -.045em; font-weight: 500; margin-bottom: 22px }
+.pospoint-about h2 > span { display: block; color: var(--primary) }
+.pospoint-about .home-about-copy > p { color: var(--muted); font-size: 13px; line-height: 1.95; max-width: 480px; margin-bottom: 28px }
+.pospoint-about ul { display: grid; grid-template-columns: 1fr; gap: 13px; padding: 0; list-style: none; margin: 0 0 30px }
+.pospoint-about li { display: flex; align-items: center; gap: 10px; color: var(--ink); font-size: 12px; line-height: 1.7 }
+.home-about-check { display: grid; place-items: center; width: 23px; height: 23px; border-radius: 50%; flex: 0 0 23px; background: var(--primary-tint) }
+.pospoint-about li .icon { width: 12px; height: 12px; color: var(--primary) }
+.pospoint-about .home-about-link { display: inline-flex; align-items: center; justify-content: space-between; gap: 32px; min-height: 48px; padding: 11px 18px; border: 1px solid var(--line); border-radius: 8px; color: var(--ink); text-decoration: none; font-size: 12px; transition: background .2s, border-color .2s, color .2s }
+.pospoint-about .home-about-link:hover { background: var(--primary); border-color: var(--primary); color: #fff }
+
+/* The dark footer anchors the lighter shop, with a blue contact action. */
+.site-footer { background: #141b2d; color: #fff; border-top: 0 }
+.site-footer .footer-cta { gap: 48px; padding: 60px 0; border-bottom-color: #ffffff24 }
+.footer-eyebrow { display: inline-flex; align-items: center; gap: 9px; color: #c1c8d7; font-size: 10px; line-height: 1.7; margin-bottom: 15px }
+.footer-eyebrow::before { content: ""; display: block; width: 6px; height: 6px; border-radius: 50%; background: #dce6ff }
+.site-footer .footer-cta h2 { font-size: clamp(28px, 3vw, 42px); line-height: 1.45; letter-spacing: -.04em; font-weight: 500 }
+.site-footer .footer-cta p { color: #aeb8ca; font-size: 12px; line-height: 1.9; margin-top: 12px }
+.site-footer .footer-cta-button { min-height: 58px; min-width: 240px; justify-content: space-between; padding: 9px 11px 9px 23px; border-radius: 9px; background: #dce6ff; color: #141b2d; font-size: 12px; gap: 28px }
+.site-footer .footer-cta-button > span { width: 38px; height: 38px; border-radius: 6px; background: #141b2d; color: #dce6ff }
+.site-footer .footer-cta-button:hover { background: #eef3ff }
+.site-footer .footer-main { grid-template-columns: minmax(0, 1.45fr) minmax(0, .75fr) minmax(0, .75fr) minmax(0, 1.1fr); gap: 48px; padding: 52px 0 45px }
+.site-footer .footer-brand .brand img { height: 36px; width: auto }
+.site-footer .footer-brand p { color: #aeb8ca; font-size: 12px; line-height: 1.95; max-width: 290px; margin: 20px 0 }
+.site-footer .footer-social { border-color: #ffffff26; border-radius: 7px; font-size: 11px; color: #c1c8d7; padding: 7px 12px; min-height: 38px }
+.site-footer .footer-social:hover { color: #dce6ff; border-color: #dce6ff }
+.site-footer .footer-nav h2, .site-footer .footer-contact h2 { color: #fff; font-size: 12px; margin-bottom: 18px }
+.site-footer .footer-nav a, .site-footer .footer-nav button { color: #aeb8ca; font-size: 11px; line-height: 1.8; min-height: 39px }
+.site-footer .footer-nav a:hover, .site-footer .footer-nav button:hover, .site-footer .footer-contact a:hover { color: #dce6ff }
+.site-footer .footer-contact ul { gap: 12px }
+.site-footer .footer-contact li { gap: 11px }
+.site-footer .footer-contact li > .icon { width: 14px; height: 14px; color: #dce6ff; margin-top: 9px }
+.site-footer .footer-contact a { color: #aeb8ca; min-height: 32px; font-size: 11px; line-height: 1.8 }
+.site-footer .footer-contact li:first-child a { color: #fff; font-size: 13px }
+.site-footer .footer-contact li:first-child a:hover { color: #dce6ff }
+.site-footer .footer-bottom { border-color: #ffffff24; padding: 21px 0 }
+.site-footer .footer-bottom p { color: #aeb8ca; font-size: 10px }
+.footer-signature { color: #dce6ff; font-family: var(--font-inter), Arial, sans-serif; font-size: 12px; letter-spacing: -.02em }
+.site-footer .footer-back-top { color: #aeb8ca; font-size: 10px }
+.site-footer .footer-back-top > span { width: 32px; height: 32px; border-radius: 7px }
+.site-footer .footer-back-top:hover { color: #dce6ff }
+.site-footer .footer-back-top:hover > span { border-color: #dce6ff }
+.site-footer a:focus-visible, .site-footer button:focus-visible { outline-color: #dce6ff }
+
+@media (max-width: 1380px) {
+  .site-header .header-main { gap: 20px }
+  .site-header .main-nav { margin-left: 0 }
+  .site-header .nav-link { padding-inline: 10px; font-size: 11px }
+  .site-header .header-cart > span { display: none }
+  .site-header .search-form { width: clamp(180px, 18vw, 250px) }
+  .site-footer .footer-main { gap: 32px }
+}
+@media (max-width: 1180px) {
+  .site-header .header-main { flex-wrap: wrap; gap: 16px 24px; padding: 20px 0 12px }
+  .site-header .main-nav { order: 4; flex-basis: 100%; margin: 0; gap: 12px }
+  .site-header .nav-link { font-size: 12px; padding-inline: 14px }
+  .site-header .search-form { width: min(360px, 40%); margin-left: auto }
+  .site-header .header-cart > span { display: inline }
+  .site-header .catalog-menu { max-width: 90vw }
+  .home-about.pospoint-about { padding-top: 72px; padding-bottom: 72px; gap: 44px }
+  .pospoint-about .home-about-photo, .pospoint-about .home-about-photo > img { min-height: 440px }
+  .site-footer .footer-main { gap: 28px }
+}
+@media (max-width: 900px) {
+  .header-utility { font-size: 9px }
+  .header-utility-links { gap: 18px }
+  .site-header .header-main { gap: 14px 20px }
+  .site-header .brand img { height: 31px }
+  .site-header .search-form { width: min(300px, 38%) }
+  .site-header .header-cart > span { display: none }
+  .site-header .header-actions { gap: 8px }
+  .home-about.pospoint-about { grid-template-columns: 1fr; gap: 36px; padding-block: 64px }
+  .pospoint-about .home-about-photo { min-height: 0 }
+  .pospoint-about .home-about-photo > img { min-height: 0; aspect-ratio: 16 / 10; height: auto }
+  .pospoint-about .home-about-copy { max-width: 600px; padding-block: 0 }
+  .pospoint-about h2 { font-size: 35px; max-width: 600px }
+  .pospoint-about .home-about-copy > p { max-width: 560px }
+  .pospoint-about ul { grid-template-columns: 1fr 1fr; gap: 14px 20px }
+  .site-footer .footer-cta { gap: 28px; padding-block: 44px }
+  .site-footer .footer-cta h2 { font-size: 30px }
+  .site-footer .footer-cta-button { min-width: 210px; gap: 18px }
+  .site-footer .footer-main { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-areas: "brand contact" "company information"; gap: 38px 48px; padding-block: 42px }
+  .site-footer .footer-contact a { min-height: 38px }
+  .site-footer .footer-contact li > .icon { margin-top: 12px }
+  .site-footer .footer-nav a, .site-footer .footer-nav button { min-height: 42px }
+}
+@media (max-width: 600px) {
+  .header-utility { min-height: 34px }
+  .header-utility p { display: none }
+  .header-utility-links { width: 100%; justify-content: space-between; gap: 12px }
+  .header-utility-links a, .header-utility-links button { font-size: 9px; min-height: 33px }
+  .site-header .header-main { gap: 12px; padding: 16px 0 10px }
+  .site-header .brand img { height: 28px }
+  .site-header .header-actions { order: 2; margin-left: auto; gap: 8px }
+  .site-header .header-actions .text-button { min-width: 40px; min-height: 40px; padding: 9px }
+  .site-header .header-actions .header-cart { padding-inline: 10px; gap: 7px }
+  .site-header .header-actions .icon { width: 18px; height: 18px }
+  .site-header .header-cart .small-count { min-width: 17px; height: 17px; font-size: 9px }
+  .site-header .search-form { order: 3; flex-basis: 100%; width: 100%; margin: 0; height: 43px; padding-inline: 12px }
+  .site-header .search-form input { font-size: 11px }
+  .site-header .main-nav { justify-content: space-between; gap: 4px; margin: 0 }
+  .site-header .nav-link { min-height: 42px; padding: 9px 10px; font-size: 11px; gap: 6px }
+  .site-header .catalog-grid-icon { width: 14px; height: 14px }
+  .site-header .nav-chevron { margin-left: 0 }
+  .site-header .catalog-wrap { position: static }
+  .site-header .catalog-menu { left: 0; width: 100%; max-width: none; padding: 10px; top: calc(100% + 8px); max-height: 65vh; overflow-y: auto; border-radius: 10px }
+  .site-header .catalog-grid { gap: 5px }
+  .site-header .catalog-item { flex-direction: column; text-align: center; gap: 8px; padding: 12px 6px }
+  .site-header .catalog-text strong { font-size: 11px }
+  .site-header .catalog-text small { font-size: 9px }
+  .site-header .catalog-all { font-size: 11px; padding-inline: 12px }
+  .home-about.pospoint-about { padding-block: 44px; gap: 30px }
+  .pospoint-about .home-about-photo { border-radius: 12px }
+  .pospoint-about .home-about-photo > img { aspect-ratio: 1.1; object-position: 65% center }
+  .home-about-photo-label { left: 12px; right: 12px; bottom: 12px; min-height: 60px; border-radius: 7px; padding: 14px }
+  .home-about-photo-label > span { font-size: 10px; gap: 8px }
+  .home-about-photo-label > .icon { width: 20px; height: 20px }
+  .pospoint-about .home-about-copy .page-eyebrow { font-size: 10px; margin-bottom: 17px }
+  .pospoint-about h2 { font-size: 28px; line-height: 1.5; margin-bottom: 18px }
+  .pospoint-about .home-about-copy > p { font-size: 12px; margin-bottom: 23px }
+  .pospoint-about ul { grid-template-columns: 1fr; gap: 12px; margin-bottom: 25px }
+  .pospoint-about li { font-size: 11px }
+  .pospoint-about .home-about-link { min-height: 46px; font-size: 11px }
+  .site-footer .footer-cta { align-items: stretch; flex-direction: column; gap: 24px; padding-block: 38px }
+  .footer-eyebrow { font-size: 9px; margin-bottom: 14px }
+  .site-footer .footer-cta h2 { font-size: 29px; line-height: 1.45 }
+  .site-footer .footer-cta p { max-width: 320px; font-size: 11px; margin-top: 10px }
+  .site-footer .footer-cta-button { min-width: 0; width: 100%; min-height: 55px; font-size: 11px; padding-left: 18px }
+  .site-footer .footer-main { grid-template-areas: "brand brand" "company information" "contact contact"; gap: 34px 24px; padding-block: 34px }
+  .site-footer .footer-brand .brand img { height: 32px }
+  .site-footer .footer-brand p { font-size: 11px; max-width: 300px; margin-block: 18px }
+  .site-footer .footer-contact ul { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 12px }
+  .site-footer .footer-contact li { gap: 8px }
+  .site-footer .footer-contact li:last-child { grid-column: 1 / -1 }
+  .site-footer .footer-contact li:first-child a { font-size: 11px }
+  .site-footer .footer-contact a { font-size: 10px; min-height: 37px }
+  .site-footer .footer-nav h2, .site-footer .footer-contact h2 { font-size: 11px; margin-bottom: 12px }
+  .site-footer .footer-nav a, .site-footer .footer-nav button { font-size: 10px }
+  .site-footer .footer-bottom { gap: 12px; padding-block: 17px; flex-wrap: wrap }
+  .site-footer .footer-bottom p { font-size: 9px; max-width: 65% }
+  .footer-signature { display: none }
+  .site-footer .footer-back-top { gap: 8px; font-size: 9px }
+  .site-footer .footer-back-top > span { width: 28px; height: 28px }
+}
+@media (prefers-reduced-motion: reduce) {
+  .site-header .catalog-menu, .site-header .catalog-item, .site-header .nav-chevron { transition: none }
+}

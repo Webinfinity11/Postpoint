@@ -3,20 +3,21 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useRef, useState, type CSSProperties, type MouseEvent } from "react";
-import { ArrowRight, ChevronDown } from "lucide-react";
+import { useEffect, useRef, useState, type CSSProperties } from "react";
+import { ArrowRight, ChevronDown, LayoutGrid } from "lucide-react";
 import { site } from "@/data/site";
 import { useCatalog } from "@/components/providers/CatalogProvider";
 import { fill } from "@/lib/money";
 
 const ic = { className: "icon", strokeWidth: 1.65, "aria-hidden": true } as const;
 
-/** Header links: About · Catalog (hover dropdown with categories) · Contact */
+/** Categories are available by pointer, keyboard, and touch. */
 export function MainNav() {
   const { categories, categoryCounts } = useCatalog();
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const wrapRef = useRef<HTMLDivElement>(null);
+  const triggerRef = useRef<HTMLButtonElement>(null);
   const closeTimer = useRef<ReturnType<typeof setTimeout>>(undefined);
   const canHover = () => window.matchMedia("(hover: hover)").matches;
 
@@ -31,7 +32,11 @@ export function MainNav() {
     const onClick = (e: globalThis.MouseEvent) => {
       if (!wrapRef.current?.contains(e.target as Node)) setOpen(false);
     };
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key !== "Escape") return;
+      setOpen(false);
+      if (wrapRef.current?.contains(document.activeElement)) triggerRef.current?.focus();
+    };
     document.addEventListener("click", onClick);
     document.addEventListener("keydown", onKey);
     return () => {
@@ -39,40 +44,51 @@ export function MainNav() {
       document.removeEventListener("keydown", onKey);
     };
   }, [open]);
+  useEffect(() => () => clearTimeout(closeTimer.current), []);
 
   const show = () => {
     clearTimeout(closeTimer.current);
     if (canHover()) setOpen(true);
   };
   const hide = () => {
-    if (!canHover()) return;
+    if (!canHover() || wrapRef.current?.querySelector(".catalog-menu")?.contains(document.activeElement)) return;
     closeTimer.current = setTimeout(() => setOpen(false), 120);
-  };
-  // Mouse: the link opens /catalog (the menu opens on hover). Touch: first tap opens the menu.
-  const onTrigger = (e: MouseEvent) => {
-    if (canHover()) return;
-    e.preventDefault();
-    setOpen((v) => !v);
   };
 
   return (
     <nav className="main-nav" aria-label={site.nav.label}>
-      <Link href="/about" className={`nav-link ${aboutActive ? "active" : ""}`} aria-current={aboutActive ? "page" : undefined}>
-        {site.nav.about}
-      </Link>
-
-      <div className={`catalog-wrap ${open ? "open" : ""}`} ref={wrapRef} onMouseEnter={show} onMouseLeave={hide}>
-        <Link
-          href="/catalog"
-          className={`nav-link ${catalogActive ? "active" : ""}`}
-          aria-current={catalogActive ? "page" : undefined}
+      <div
+        className={`catalog-wrap ${open ? "open" : ""}`}
+        ref={wrapRef}
+        onMouseEnter={show}
+        onMouseLeave={hide}
+        onBlur={(event) => {
+          if (!event.currentTarget.contains(event.relatedTarget)) setOpen(false);
+        }}
+      >
+        <button
+          type="button"
+          ref={triggerRef}
+          className={`nav-link catalog-trigger ${catalogActive ? "active" : ""}`}
           aria-expanded={open}
           aria-controls="catalog-menu"
-          onClick={onTrigger}
+          onClick={(event) => {
+            clearTimeout(closeTimer.current);
+            // A mouse click follows hover, which has already opened the menu.
+            setOpen((value) => event.detail > 0 && canHover() ? true : !value);
+          }}
+          onKeyDown={(event) => {
+            if (event.key !== "ArrowDown") return;
+            event.preventDefault();
+            clearTimeout(closeTimer.current);
+            setOpen(true);
+            requestAnimationFrame(() => wrapRef.current?.querySelector<HTMLAnchorElement>(".catalog-item, .catalog-all")?.focus());
+          }}
         >
+          <LayoutGrid {...ic} className="icon catalog-grid-icon" />
           {site.nav.catalog}
           <ChevronDown {...ic} className="icon nav-chevron" />
-        </Link>
+        </button>
 
         <div className="catalog-menu" id="catalog-menu" inert={!open}>
           <div className="catalog-grid">
@@ -99,6 +115,10 @@ export function MainNav() {
           </Link>
         </div>
       </div>
+
+      <Link href="/about" className={`nav-link ${aboutActive ? "active" : ""}`} aria-current={aboutActive ? "page" : undefined}>
+        {site.nav.about}
+      </Link>
 
       <Link href="/contact" className={`nav-link ${contactActive ? "active" : ""}`} aria-current={contactActive ? "page" : undefined}>
         {site.nav.contact}

@@ -33,6 +33,7 @@ export function FreshPicks() {
     <section className="fresh-section section-pad" id="fresh-picks" aria-labelledby="fresh-title">
       <SectionHeading
         id="fresh-title"
+        eyebrow="02 / POSPOINT-ის არჩევანი"
         title={title}
         action={<PillButton onClick={toggleShowAll}>{showAll && !filtered ? site.sections.showLess : site.sections.showAll}</PillButton>}
       >
